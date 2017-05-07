@@ -3,7 +3,7 @@ package dataStruct.graph;
 import dataStruct.Stacck.LinkStack;
 
 /**
- * 求AOE网的关键路径
+ * 拓扑排序求AOE网的关键路径
  * @author 范立炎
  * @时间 2017-05-06
  */
