@@ -1,8 +1,6 @@
 package dataStruct.sort;
 
-import org.omg.PortableInterceptor.DISCARDING;
-
-import dataStruct.graph.ShortestPath_DIJ;
+import dataStruct.xianxingbiao.SqList;
 
 /**
  * 待排序顺序表类描述
@@ -10,10 +8,20 @@ import dataStruct.graph.ShortestPath_DIJ;
  * @时间 2017-05-07
  *
  */
-public class SeqList {
+public class SeqList{
     public RecordNode[] r; 			//顺序表记录结点数组
     public int curlen;				//顺序表长度，即记录个数
     
+   
+	public int length() {
+		return curlen;
+	}
+	public void display() {
+		for(int j = 0; j < curlen; j++){
+			System.out.print(r[j] + " ");
+		}
+		System.out.println();
+	}
     //顺序表的构造方法，构造一个存储空间容量为maxSize的顺序表
     public SeqList(int maxSize){
     	this.r = new RecordNode[maxSize];      //为顺序表分配maxSize个存储单元
@@ -330,12 +338,11 @@ public class SeqList {
   		RecordNode[] temp = new RecordNode[n];   //定义长度为n的辅助数组temp
   		while(s < n){
   			mergepass(r, temp, s, n);   //一趟归并，将r数组中各子序列归并到temp中
-  		//	display();
+  			display();
   			s *= 2;   //子序列长度加倍
   			mergepass(temp, r, s, n);   //将temp数组中各子序列再归并到r中
-  		//	display();
+  			display();
   			s *= 2;
   		}
-  		
   	}
 }
