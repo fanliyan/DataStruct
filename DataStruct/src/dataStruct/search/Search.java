@@ -1,5 +1,7 @@
 package dataStruct.search;
 
+import dataStruct.erchashu.BiTreeNode;
+import dataStruct.sort.RecordNode;
 import dataStruct.sort.SeqList;
 
 /**
@@ -69,5 +71,7 @@ public int binarySearch(Comparable key){
 	}
 	return -1;
 }
+
+	
   
 }
